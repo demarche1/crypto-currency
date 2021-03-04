@@ -1,0 +1,56 @@
+.container{
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    margin-top: .5rem;
+    box-shadow: 1px 2px 8px rgb(127, 128, 127);
+    font-size: 1.2rem;
+}
+
+.card:hover{
+    background-color: rgb(249, 252, 249);
+    cursor: pointer;
+}
+
+.coinLogo{
+    width: 2rem;
+    height: 2rem;
+}
+
+.name{
+    font-weight: 400;
+}
+
+.price{
+    opacity: .5;
+    font-weight: 700;
+}
+.negative{
+    display: flex;
+    align-items: center;
+    color: rgb(255, 1, 1);
+    font-weight: 700;
+}
+
+.positive{
+    display: flex;
+    align-items: center;
+    color: rgb(6, 216, 6);
+    font-weight: 700;
+}
+
+.chartIcon{
+    margin-right: .5rem;
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
