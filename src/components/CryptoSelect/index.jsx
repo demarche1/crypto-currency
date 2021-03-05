@@ -2,7 +2,7 @@ import styles from './CryptoSelect.module.css'
 import {useState, useEffect} from 'react';
 import { fetchCryptoName, fecthCryptoFromSelected } from '../../api';
 
-const CryptoSelect = ({setCryptoList}) => {
+const CryptoSelect = ({setCryptoList, cryptoList}) => {
     const [ coins, setCoins ] = useState([]);
 
 
@@ -11,7 +11,6 @@ const CryptoSelect = ({setCryptoList}) => {
             setCoins(await fetchCryptoName())
         }
         setCoinsNames()
-        fecthCryptoFromSelected('bitcoin')
     }, [setCoins])
 
 

@@ -45,12 +45,43 @@
     font-weight: 700;
 }
 
-.chartIcon{
-    margin-right: .5rem;
-}
-
 .loading{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.negative::before{
+    content: '⬇️';
+    margin-right: .5rem;
+}
+
+.positive::before{
+    content: '⬆️';
+    margin-right: .5rem;
+}
+
+
+
+/* toggle / show / hide */
+
+.showMore{
+    width: 100%;
+    text-align: center;
+}
+
+.moreInformation{
+    text-align: left;
+}
+
+.hide{
+    display: none;
+}
+
+.cap,
+.high,
+.low,
+.circulation{
+    font-size: .9rem;
+    opacity: .7;
 }

@@ -1,4 +1,4 @@
-import { CryptoList, CryptoSelect } from './components'
+import { CryptoList, CryptoSelect, Searchbar, Logo } from './components'
 import {fetchCryptoList} from './api'
 import {useState,useEffect} from 'react'
 import styles from './App.module.css'
@@ -6,20 +6,24 @@ import styles from './App.module.css'
 const App = () => {
 
     const [cryptoList, setCryptoList] = useState([])
+    const [searchbarValue, setsearchbarValue ] = useState('')
 
     useEffect(() => {
        const getCryptoList = async() => {
             setCryptoList(await fetchCryptoList())
        }
        getCryptoList()
+
     }, [setCryptoList])
 
-    console.log(cryptoList);
+    console.log(searchbarValue);
 
     return (
         <div className={styles.container}>
-            <CryptoSelect setCryptoList={setCryptoList}/>
-            <CryptoList cryptoList={cryptoList}/>
+            <Logo/>
+            <Searchbar setsearchbarValue={setsearchbarValue}/>
+            <CryptoSelect setCryptoList={setCryptoList} cryptoList={cryptoList}/>
+            <CryptoList searchbarValue={searchbarValue} cryptoList={cryptoList}/>
         </div>
     );
 }
