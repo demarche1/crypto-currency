@@ -2,7 +2,7 @@ import styles from './CryptoSelect.module.css'
 import {useState, useEffect} from 'react';
 import { fetchCryptoName, fecthCryptoFromSelected } from '../../api';
 
-const CryptoSelect = ({setCryptoList, cryptoList}) => {
+const CryptoSelect = ({setCryptoList}) => {
     const [ coins, setCoins ] = useState([]);
 
 

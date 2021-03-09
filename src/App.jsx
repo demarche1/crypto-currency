@@ -22,7 +22,7 @@ const App = () => {
         <div className={styles.container}>
             <Logo/>
             <Searchbar setsearchbarValue={setsearchbarValue}/>
-            <CryptoSelect setCryptoList={setCryptoList} cryptoList={cryptoList}/>
+            <CryptoSelect setCryptoList={setCryptoList}/>
             <CryptoList searchbarValue={searchbarValue} cryptoList={cryptoList}/>
         </div>
     );
